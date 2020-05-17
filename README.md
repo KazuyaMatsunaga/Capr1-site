@@ -8,4 +8,4 @@ http://www.capr1.site/
 | 領域 |使用技術  |
 | -------- | -------- | 
 | Frontend     | HTML,CSS,JavaScript     |  
-| Infrastructure     | Docker, GCP(GCE)  | 
+| Infrastructure     | Docker, GCP(GCE)、Nginx  | 
