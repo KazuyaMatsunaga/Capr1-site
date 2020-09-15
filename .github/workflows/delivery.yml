@@ -8,7 +8,7 @@ on:
 env:
   GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
   GCP_REGION: ${{ secrets.GCP_REGION }}
-  IMAGE: asia.gcr.io/${{ secrets.GCP_PROJECT }}/capr1-site:${{ github.sha }}
+  IMAGE: asia.gcr.io/${{ secrets.GCP_PROJECT }}/capr1-site
 
 jobs:
   delivery:
@@ -29,15 +29,15 @@ jobs:
         run: gcloud auth configure-docker --quiet
 
       - name: Build a docker image
-        run: docker build . -t capr1-site
+        run: docker build . -t $IMAGE
 
       - name: Push the docker image
-        run: docker push capr1-site
+        run: docker push $IMAGE
 
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy capr1-site \
-            --image capr1-site \
+            --image $IMAGE \
             --project $GCP_PROJECT \
             --region $GCP_REGION \
             --platform managed \
