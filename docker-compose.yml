@@ -1,6 +1,6 @@
 version: "3"
 services:
-  nginx:
+  capr1-site:
     image: nginx:latest
     ports:
       - "80:80"
