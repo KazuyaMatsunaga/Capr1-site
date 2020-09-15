@@ -8,7 +8,7 @@ on:
 env:
   GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
   GCP_REGION: ${{ secrets.GCP_REGION }}
-  IMAGE: asia.gcr.io/${{ secrets.GCP_PROJECT }}/capr1-site
+  IMAGE: asia.gcr.io/${{ secrets.GCP_PROJECT }}/capr1-site:${{ github.sha }}
 
 jobs:
   delivery:
