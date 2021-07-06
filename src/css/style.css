@@ -110,6 +110,11 @@ li {
   text-align: center;
 }
 
+/*About me部分*/
+.career-wrapper {
+  text-align: center;
+}
+
 /*Interests部分*/
 .interests-wrapper {
   text-align: center;
@@ -117,6 +122,11 @@ li {
 
 /*Activity部分*/
 .activity-wrapper {
+  text-align: center;
+}
+
+/*Activity部分*/
+.others-wrapper {
   text-align: center;
 }
 
